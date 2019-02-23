@@ -145,3 +145,5 @@ public class IterableAndIteratorTest {
 
 }
 ```
+
+注意：Enumeration也提供了Iterator的hasNext和next功能，不过新的实现应该优先使用Iterator。

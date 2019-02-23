@@ -1,0 +1,95 @@
+@startuml
+
+abstract class AbstractList
+abstract AbstractCollection
+abstract AbstractSet
+interface List
+interface Collection
+interface Set
+class EnumSet
+class HashSet
+interface Map
+class HashMap
+class EnumMap
+abstract class AbstractMap
+class Hashtable
+abstract class Dictionary
+class IdentityHashMap
+class ConcurrentHashMap
+interface ConcurrentMap
+class TreeMap
+interface NavigableMap
+interface SortedMap
+class WeakHashMap
+class LinkedHashMap
+class LinkedHashSet
+class LinkedList
+abstract class AbstractSequentialList
+class CopyOnWriteArrayList
+class Properties
+class TreeSet
+interface SortedSet
+interface NavigableSet
+class Vector
+Dictionary <|-- Hashtable
+Hashtable ..|> Map
+AbstractMap<|--ConcurrentHashMap
+AbstractMap <|-- IdentityHashMap
+IdentityHashMap ..|> Map
+Map <|-- ConcurrentMap
+ConcurrentHashMap ..|> ConcurrentMap
+Map <|-- ConcurrentMap
+AbstractMap <|-- TreeMap
+TreeMap ..|> NavigableMap
+SortedMap <|-- NavigableMap
+Map <|-- SortedMap
+AbstractMap <|-- WeakHashMap
+WeakHashMap ..|> Map
+HashMap <|-- LinkedHashMap
+LinkedHashMap ..|> Map
+Hashset <|-- LinkedHashSet
+LinkedHashSet ..|> Set
+AbstractList <|-- AbstractSequentialList
+AbstractSequentialList <|-- LinkedList
+LinkedList ..|> List
+Hashtable <|-- Properties
+AbstractSet <|-- TreeSet
+TreeSet ..|> NavigableSet
+SortedSet <|-- NavigableSet
+Set <|-- SortedSet
+AbstractList <|-- Vector
+Vector ..|> List
+
+AbstractMap ..|> Map
+AbstractMap <|-- HashMap
+AbstractMap <|-- EnumMap
+HashMap ..|> Map
+
+
+Iterable <|-- Collection
+List <|-- AbstractList
+AbstractCollection ..|> Collection
+AbstractSet ..|> Collection
+
+Collection <|- List
+Collection <|-- Set
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+ArrayList ..|> List
+CopyOnWriteArrayList ..|> List
+
+AbstractSet <|-- EnumSet
+AbstractSet <|-- HashSet
+HashSet ..|> Set
+
+
+interface Iterable {
+Iterator iterator()
+}
+
+class ArrayList {
+Object[] elementData
+size()
+}
+
+@enduml

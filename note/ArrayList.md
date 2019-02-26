@@ -1,7 +1,7 @@
 ArrayList继承AbstractList，实现List接口。ArrayList中的元素是有序的，可重复，内部使用数组来存储元素。
 
 先看下ArrayList在集合中的位置：
-![](/note/java_collection_uml.png)
+![](/imgs/java_collection_uml.png)
 
 ## ArrayList的初始化
 ArrayList提供了3种初始化方法，下面一一说明。

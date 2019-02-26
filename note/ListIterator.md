@@ -1,6 +1,6 @@
 ListIterator接口继承自Iterator接口，在List接口中定义了listIterator()返回ListIterator，需要子类实现。
 
-ListIterator中定义的方法如下：
+ListIterator中定义的方法如下：  
 ![](/imgs/ListIterator.png)
 
 其中，hasNext()，next()，remove()是Iterator中定义的方法，其它都是新增的方法。在List的实现类中都需要实现自己的ListIterator。
